@@ -32,15 +32,18 @@ var AccomodationSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    places: {
+    nb_of_places: {
         type: Number,
         min: 1,
         max: 100
     },
-    nights: {
+    nb_of_nights: {
         type: Number,
         min: 1,
         max: 100
+    },
+    date: {
+        type: Date
     },
     doRide: {
         type: Boolean,
@@ -52,7 +55,7 @@ var AccomodationSchema = mongoose.Schema({
         type: String
     },
     remark: {
-        type: String,
+        type: String
     }
 })
 

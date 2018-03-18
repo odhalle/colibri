@@ -32,6 +32,12 @@ app.get('/', function(req, res){
     res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
 });
 
+// Require accomodation, ride, extension routes
+require('./app/routes/accomodation.routes.js')(app);
+require('./app/routes/ride.routes.js')(app);
+require('./app/routes/extension.router.js')(app);
+require('./app/routes/relay.router.js')(app);
+
 // listen for requests
 app.listen(8080, function(){
     console.log("Server is listening on port 8080");
