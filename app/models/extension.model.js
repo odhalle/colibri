@@ -1,21 +1,21 @@
 var mongoose = require('mongoose');
 
 var ExtensionSchema = mongoose.Schema({
-    email: {
+    host_email: {
         type: String,
         lowercase: true
     },
-    last_name: {
+    host_last_name: {
         type: String
     },
-    first_name: {
+    host_first_name: {
         type: String
     },
-    phone_number: {
+    host_phone_number: {
         type: String,
         required: true
     },
-    nb_of_guests: {
+    number_of_guests: {
         type: Number,
         min: 1,
         max: 100
