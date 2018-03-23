@@ -1,42 +1,43 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
 
 var RideSchema = mongoose.Schema({
-    email: {
-        type: String,
-        lowercase: true
+  driver_email: {
+    type: String,
+    lowercase: true
+  },
+  driver_last_name: {
+    type: String
+  },
+  driver_first_name: {
+    type: String
+  },
+  driver_phone_number: {
+    type: String,
+    required: true
+  },
+  driver_address: {
+    zip_code: {
+      type: String
     },
-    last_name: {
-        type: String
-    },
-    first_name: {
-        type: String
-    },
-    phone: {
-        type: String,
-        required: true
-    },
-    address: {
-        zip_code: {
-            type: String
-        },
-        city: {
-            type: String
-        }
-    },
-    date: {
-        type: Date
-    },
-    capacity: {
-        type: Number,
-        min: [1, 'Too few places'],
-        max: 100
-    },
-    remark: {
-        type: String,
+    city: {
+      type: String
     }
-    //- Trajets arrangés (opt.)
-    //- Nombre de place dans la voiture (opt.)
+  },
+  date: {
+    type: Date
+  },
+  vehicle_capacity: {
+    type: Number,
+    min: [1, 'Too few places'],
+    max: 100
+  },
+  driver_arrangements: {
+    type: [String]
+  },
+  remark: {
+    type: String
+  }
 })
 
-var Ride = mongoose.model('Ride', RideSchema);
-module.exports = mongoose.model('Ride', RideSchema);
+var Ride = mongoose.model('Ride', RideSchema)
+module.exports = mongoose.model('Ride', RideSchema)
