@@ -10,7 +10,7 @@ exports.create = function(req, res) {
     host_first_name: req.body.host_first_name,
     host_alias: req.body.host_alias,
     host_address: {
-      street: req.body.host_address.number,
+      street: req.body.host_address.street,
       number: req.body.host_address.number,
       zip: req.body.host_address.zip,
       city: req.body.host_address.city
@@ -19,7 +19,7 @@ exports.create = function(req, res) {
     number_of_guests: req.body.number_of_guests,
     number_of_nights: req.body.number_of_nights,
     date: req.body.date,
-    host_does_drive: req.body.host_rider,
+    host_does_drive: req.body.host_does_drive,
     host_additional_places: req.body.host_additional_places,
     host_selected_driver: req.body.host_selected_driver,
     remark: req.body.remark
@@ -120,7 +120,7 @@ exports.update = function(req, res) {
     accomodation.host_first_name = req.body.host_first_name
     accomodation.host_alias = req.body.host_alias
     accomodation.host_address = {
-      street: req.body.host_address.number,
+      street: req.body.host_address.street,
       number: req.body.host_address.number,
       zip: req.body.host_address.zip,
       city: req.body.host_address.city
@@ -129,7 +129,7 @@ exports.update = function(req, res) {
     accomodation.number_of_guests = req.body.number_of_guests
     accomodation.number_of_nights = req.body.number_of_nights
     accomodation.date = req.body.date
-    accomodation.host_does_drive = req.body.host_rider
+    accomodation.host_does_drive = req.body.host_does_drive
     accomodation.host_additional_places = req.body.host_additional_places
     accomodation.host_selected_driver = req.body.host_selected_driver
     accomodation.remark = req.body.remark

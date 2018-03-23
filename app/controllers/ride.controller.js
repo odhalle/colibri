@@ -14,7 +14,7 @@ exports.create = function(req, res) {
       zip_code: req.body.driver_address.zip_code,
       city: req.body.driver_address.city
     },
-    date: req.body.driver.date,
+    date: req.body.date,
     vehicle_capacity: req.body.vehicle_capacity,
     driver_arrangements: req.body.driver_arrangements,
     remark: req.body.remark

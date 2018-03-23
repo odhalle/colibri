@@ -45,13 +45,13 @@ var AccomodationSchema = mongoose.Schema({
   date: {
     type: Date
   },
-  doRide: {
+  host_does_drive: {
     type: Boolean
   },
-  additional_places: {
+  host_additional_places: {
     type: Number
   },
-  driver: {
+  host_selected_driver: {
     type: String
   },
   remark: {
