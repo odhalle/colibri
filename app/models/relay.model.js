@@ -1,17 +1,17 @@
 var mongoose = require('mongoose');
 
 var RelaySchema = mongoose.Schema({
-    email: {
+    host_email: {
         type: String,
         lowercase: true
     },
-    last_name: {
+    host_last_name: {
         type: String
     },
-    first_name: {
+    host_first_name: {
         type: String
     },
-    nb_of_guests: {
+    number_of_guests: {
         type: Number,
         min: 1,
         max: 100

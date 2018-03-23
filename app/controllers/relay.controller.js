@@ -2,16 +2,19 @@ var Relay = require('../models/relay.model.js');
 
 exports.create = function (req, res) {
     // Create and save a new relay
-    console.log(req.body)
-    if (!req.body.email) {
-        return res.status(400).send({ message: "Relay can not be empty" });
-    }
+    
+    // TODO Add checks here
+
+    //console.log(req.body)
+    //if (!req.body.host_email) {
+    //    return res.status(400).send({ message: "Relay can not be empty" });
+    //}
 
     var relay = new Relay({
-        email: req.body.email,
-        last_name: req.body.last_name,
-        first_name: req.body.first_name,
-        nb_of_guests: req.body.nb_of_guests,
+        host_email: req.body.host_email,
+        host_last_name: req.body.host_last_name,
+        host_first_name: req.body.host_first_name,
+        number_of_guests: req.body.number_of_guests,
         guests_first_names: req.body.guests_first_names,
         date: req.body.date,
         remark: req.body.remark
@@ -73,10 +76,10 @@ exports.update = function (req, res) {
             return res.status(404).send({ message: "Relay not found with id " + req.params.relayId });
         }
 
-        relay.email = req.body.email;
-        relay.last_name = req.body.last_name;
-        relay.first_name = req.body.first_name;
-        relay.nb_of_guests = req.body.nb_of_guests;
+        relay.host_email = req.body.host_email;
+        relay.host_last_name = req.body.host_last_name;
+        relay.host_first_name = req.body.host_first_name;
+        relay.number_of_guests = req.body.number_of_guests;
         relay.guests_first_names = req.body.guests_first_names;
         relay.date = req.body.date;
         relay.remark = req.body.remark;
