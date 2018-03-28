@@ -74,7 +74,6 @@ exports.findOne = function(req, res) {
 exports.update = function(req, res) {
   // Update a ride identified by the rideId in the request
   Ride.findById(req.params.rideId, function(err, ride) {
-    console.log("Hein ?")
     if (err) {
       console.log(err)
       if (err.kind === 'ObjectId') {
