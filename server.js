@@ -38,7 +38,7 @@ app.get('/', function(req, res){
 
 // Require accomodation, ride, extension routes
 require('./app/routes/accomodation.routes.js')(app);
-require('./app/routes/ride.routes.js')(app);
+require('./app/routes/ride.router.js')(app);
 require('./app/routes/extension.router.js')(app);
 require('./app/routes/relay.router.js')(app);
 
