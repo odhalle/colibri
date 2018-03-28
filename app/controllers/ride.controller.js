@@ -74,6 +74,7 @@ exports.findOne = function(req, res) {
 exports.update = function(req, res) {
   // Update a ride identified by the rideId in the request
   Ride.findById(req.params.rideId, function(err, ride) {
+    console.log("Hein ?")
     if (err) {
       console.log(err)
       if (err.kind === 'ObjectId') {
@@ -100,7 +101,7 @@ exports.update = function(req, res) {
       zip_code: req.body.driver_address.zip_code,
       city: req.body.driver_address.city
     }
-    ride.date = req.body.driver.date
+    ride.date = req.body.date
     ride.vehicle_capacity = req.body.vehicle_capacity
     ride.driver_arrangements = req.body.driver_arrangements
     ride.remark = req.body.remark
