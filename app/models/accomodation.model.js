@@ -21,7 +21,7 @@ var AccomodationSchema = mongoose.Schema({
     number: {
       type: String
     },
-    zip: {
+    zip_code: {
       type: String
     },
     city: {

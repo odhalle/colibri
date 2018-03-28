@@ -12,7 +12,7 @@ exports.create = function(req, res) {
     host_address: {
       street: req.body.host_address.street,
       number: req.body.host_address.number,
-      zip: req.body.host_address.zip,
+      zip_code: req.body.host_address.zip_code,
       city: req.body.host_address.city
     },
     host_phone_number: req.body.host_phone_number,
@@ -122,7 +122,7 @@ exports.update = function(req, res) {
     accomodation.host_address = {
       street: req.body.host_address.street,
       number: req.body.host_address.number,
-      zip: req.body.host_address.zip,
+      zip_code: req.body.host_address.zip_code,
       city: req.body.host_address.city
     }
     accomodation.host_phone_number = req.body.host_phone_number
