@@ -2,17 +2,17 @@ module.exports = function(app) {
   var accomodations = require('../controllers/accomodation.controller.js')
 
   // Create a new accomodation
-  app.post('/accomodations', accomodations.create)
+  app.post('/api/accomodations', accomodations.create)
 
   // Retrieve all accomodations
-  app.get('/accomodations', accomodations.findAll)
+  app.get('/api/accomodations', accomodations.findAll)
 
   // Retrieve a single accomodation with accomodationId
-  app.get('/accomodations/:accomodationId', accomodations.findOne)
+  app.get('/api/accomodations/:accomodationId', accomodations.findOne)
 
   // Update an accomodation with accomodationId
-  app.put('/accomodations/:accomodationId', accomodations.update)
+  app.put('/api/accomodations/:accomodationId', accomodations.update)
 
   // Delete an accomodation with accomodationId
-  app.delete('/accomodations/:accomodationId', accomodations.delete)
+  app.delete('/api/accomodations/:accomodationId', accomodations.delete)
 }
